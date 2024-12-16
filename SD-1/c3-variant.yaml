@@ -1,11 +1,11 @@
 esp32:
-  board: ESP32-S3-DevKitC-1
-  variant: ESP32S3
+  board: esp32-c3-devkitm-1
+  variant: ESP32C3
   framework:
     type: esp-idf
 
 esphome:
-  name: "Senhus SG-1S"
+  name: "Senhus SD-1C"
   name_add_mac_suffix: True
   platformio_options:
     board_build.flash_mode: dio
@@ -21,7 +21,7 @@ wifi:
   # fast_connect: True
 
   ap:
-    ssid: "Senhus SG-1S"
+    ssid: "Senhus SD-1C"
 
 captive_portal:
 
@@ -29,8 +29,8 @@ web_server:
   port: 80
 
 uart:
-  tx_pin: GPIO11
-  rx_pin: GPIO10
+  tx_pin: GPIO8 
+  rx_pin: GPIO7
   baud_rate: 256000
 
 ld2410:
